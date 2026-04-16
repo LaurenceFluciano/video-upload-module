@@ -1,6 +1,6 @@
-import { VideoUploadProviderData, VideoUploadProviderResponse } from "./video.dto";
-import { VideoMetadata } from "./video.metadata";
-import { VideoUploadProvider } from "./video.upload.provider";
+import { VideoUploadProviderData, VideoUploadProviderResponse } from "./video.dto.ts";
+import { VideoMetadata } from "./video.metadata.ts";
+import { VideoUploadProvider } from "./video.upload.provider.ts";
 
 // Simulando import de configuração externo
 const ACCESS_TOKEN = ""
