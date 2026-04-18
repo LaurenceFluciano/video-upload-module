@@ -27,6 +27,13 @@ Ele define quem pode fazer upload e como esse upload será realizado, retornando
 - Arquitetura preparada para múltiplos providers
 - Foco em simplicidade e extensibilidade
 
+# Arquitetura e Fluxos
+
+Para entender a fundo a lógica de cada componente, acesse as especificações técnicas abaixo:
+
+- [Especificação de Provedores de Upload](./src/Video%20Upload%20Provider.md): Detalhes sobre o VideoUploadProviderContext e a estratégia de upload via providers externos.
+
+- [Especificação de Confirmação de Video](./src/Video%20Confirm.md): Documentação sobre o VideoConfirm, o fluxo de validação de posse e a garantia de consistência atômica com o provedor.
 
 # Execução do servidor:
 
@@ -37,3 +44,20 @@ deno task start
 # Observação
 
 Este componente prioriza controle de dependências e isolamento de integrações externas, mantendo a lógica de negócio independente de detalhes de implementação. Diante desse cenário, é possível utilizar o componente em qualquer dominio, não precisando executar esse servidor de testes.
+
+# Documentação de provedores externos
+
+Consulte a [Documentação da API do YouTube](https://developers.google.com/youtube/v3)
+
+## Roadmap de Melhorias (Backlog)
+
+Abaixo estão as evoluções planejadas para elevar a maturidade do componente:
+
+- Refinamento de Input: Validar títulos e descrições (tamanho, caracteres especiais) antes de iniciar o handshake com o provedor.
+
+- Resiliência de Erros: Implementar o Either Error Pattern para substituir o uso de throw por retornos tipados, tornando a gestão de falhas explícita em tempo de compilação.
+
+- Observabilidade: Injetar camadas de log por requisição para monitorar latência e taxa de sucesso das integrações com APIs de terceiros.
+
+- Escalabilidade de Query: Implementar paginação baseada em Cursor no VideoQuery para garantir performance estável em coleções de dados massivas.
+
