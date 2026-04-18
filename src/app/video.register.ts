@@ -16,8 +16,7 @@ export class VideoRegister {
     constructor(
         private repository: VideoRepository
     ) {}
-
-    execute(data: VideoRegisterData): string {
+    async execute(data: VideoRegisterData): Promise<string> {
         const video = new Video(
             crypto.randomUUID().toString(),
             data.userId,
@@ -29,7 +28,7 @@ export class VideoRegister {
         video.extension = data.extension;
         video.status = "pending";
 
-        this.repository.save(video)
+        await this.repository.save(video)
 
         return video.id;
     }

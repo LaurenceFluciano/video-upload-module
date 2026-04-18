@@ -11,9 +11,8 @@ export class VideoConfirm {
         private repository: VideoRepository,
         private provider: VideoUploadValidator
     ) {}
-
     async execute(data: VideoConfirmData): Promise<void> {
-        const video = this.repository.getVideoById(data.videoId);
+        const video = await this.repository.getVideoById(data.videoId);
         if (!video) {
             throw new Error("Vídeo não encontrado no sistema.");
         }
@@ -27,6 +26,6 @@ export class VideoConfirm {
         video.status = "active";
         video.providerVideoId = data.videoCode;
 
-        this.repository.save(video);
+        await this.repository.save(video);
     }
 }

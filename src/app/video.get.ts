@@ -8,8 +8,8 @@ export class VideoQuery {
         private repository: VideoRepository
     ) {}
 
-    getUserVideos(userId: string): VideoQueryResponse[] {
-        const videos = this.repository.listVideosByUserId(userId);
+    async getUserVideos(userId: string): Promise<VideoQueryResponse[]> {
+        const videos = await this.repository.listVideosByUserId(userId);
 
         return videos.map((video) => {
             return {
