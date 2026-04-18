@@ -1,5 +1,5 @@
+import { YoutubeVideoUploadValidator } from "../infra/providers/youtube.video.upload.validator.ts";
 import { VideoUploadValidator } from "../interfaces/video.upload.validator.ts";
-import { YoutubeVideoUploadValidator } from "../providers/youtube.video.upload.validator.ts";
 
 import { VideoProviders } from "../video.data.dto.ts";
 
