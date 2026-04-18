@@ -8,7 +8,7 @@ export type VideoMetadata = {
 export type VideoUploadProviderData  = {
     title: string,
     description: string,
-    videoMetada: VideoMetadata
+    videoMetada: VideoMetadata,
 }
 
 export type VideoStatus = "pending" | "active"
