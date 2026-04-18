@@ -1,6 +1,9 @@
 {
   "imports": {
-    "hono": "jsr:@hono/hono@^4.12.14"
+    "@db/sqlite": "jsr:@db/sqlite@^0.13.0",
+    "hono": "jsr:@hono/hono@^4.12.14",
+    "@hono/swagger-ui": "jsr:@hono/swagger-ui@^0.6.1",
+    "sqlite": "https://deno.land/x/sqlite/mod.ts"
   },
   "tasks": {
     "start": "deno run --allow-net main.ts"
