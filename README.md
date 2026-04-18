@@ -31,9 +31,9 @@ Ele define quem pode fazer upload e como esse upload será realizado, retornando
 
 Para entender a fundo a lógica de cada componente, acesse as especificações técnicas abaixo:
 
-- [Especificação de Provedores de Upload](./src/Video%20Upload%20Provider.md): Detalhes sobre o VideoUploadProviderContext e a estratégia de upload via providers externos.
+- [Especificação de Provedores de Upload](./docs/Video%20Upload%20Provider.md): Detalhes sobre o VideoUploadProviderContext e a estratégia de upload via providers externos.
 
-- [Especificação de Confirmação de Video](./src/Video%20Confirm.md): Documentação sobre o VideoConfirm, o fluxo de validação de posse e a garantia de consistência atômica com o provedor.
+- [Especificação de Confirmação de Video](./docs/Video%20Confirm.md): Documentação sobre o VideoConfirm, o fluxo de validação de posse e a garantia de consistência atômica com o provedor.
 
 # Execução do servidor:
 
